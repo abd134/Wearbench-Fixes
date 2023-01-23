@@ -22,11 +22,11 @@ public class MyService extends WearableListenerService {
                 if (item.getUri().getPath().equals("/path_1")) {
                     DataMap dataMap = DataMapItem.fromDataItem(item).getDataMap();
                     Asset asset = dataMap.getAsset(DEVICE_KEY);
-                    Log.i("Leak-1", asset.getData().toString());
+                    Log.i("Leak-1", asset.toString());
                 } else if ("/path_2".equals(item.getUri().getPath())){
                     DataMap dataMap = DataMapItem.fromDataItem(item).getDataMap();
                     Asset asset2 = dataMap.getAsset("secret_2");
-                    Log.i("Leak-2",asset2.getData().toString());
+                    Log.i("Leak-2",asset2.toString());
                 }
             }
         }

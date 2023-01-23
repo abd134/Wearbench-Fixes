@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         deviceId = source();
         String nodeId = "*";
         Task<Integer> sendMessageTask = messageClient
-                .sendMessage(nodeId, "/path", deviceId.getBytes());
+                .sendMessage(nodeId, "/unreachable", deviceId.getBytes());
 
     }
 
